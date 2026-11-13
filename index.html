@@ -1,1 +1,112 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CREATIVE HAMBER</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#100d18;color:white}
+header{padding:25px 15px;text-align:center;background:#21152e}
+h1{color:#e8bd78;letter-spacing:3px}
+nav{text-align:center;padding:15px;background:#30203c}
+nav a{color:white;margin:8px;text-decoration:none}
+.hero{text-align:center;padding:65px 20px;background:linear-gradient(135deg,#382044,#111)}
+.hero h2{font-size:32px;color:#f2cf91}
+button,.btn{background:#d9aa65;color:#201326;border:0;padding:13px 20px;border-radius:8px;font-weight:bold;cursor:pointer;text-decoration:none}
+section{padding:35px 18px;max-width:1000px;margin:auto}
+h2{text-align:center;color:#e8bd78}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:14px}
+.card{background:#261b31;padding:22px 12px;text-align:center;border-radius:12px;border:1px solid #59405e}
+.card h3{color:#e8bd78}
+input,select,textarea{width:100%;padding:13px;margin:7px 0;border-radius:7px;border:0}
+form{max-width:550px;margin:auto}
+footer{text-align:center;background:#21152e;padding:25px;color:#ddd}
+</style>
+</head>
+<body>
+<header>
+<h1>CREATIVE HAMBER</h1>
+<p>Events • Decorations • Gift Frames</p>
+<p>Thalassery, Kannur, Kerala</p>
+</header>
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#gift">Gift Frames</a>
+<a href="#booking">Booking</a>
+</nav>
+<div class="hero" id="home">
+<h2>Make Every Moment Special</h2>
+<p>നിങ്ങളുടെ ആഘോഷങ്ങൾക്ക് മനോഹരമായ ഓർമ്മകൾ സമ്മാനിക്കാം.</p>
+<a class="btn" href="#booking">Book Now</a>
+</div>
+<section id="services">
+<h2>Our Services | ഞങ്ങളുടെ സേവനങ്ങൾ</h2>
+<div class="grid">
+<div class="card"><h3>Wedding Events</h3><p>വിവാഹാഘോഷങ്ങൾ</p></div>
+<div class="card"><h3>Birthday Parties</h3><p>ജന്മദിനാഘോഷങ്ങൾ</p></div>
+<div class="card"><h3>Engagement</h3><p>വിവാഹനിശ്ചയം</p></div>
+<div class="card"><h3>Stage & Venue</h3><p>സ്റ്റേജ് അലങ്കാരം</p></div>
+<div class="card"><h3>Anniversary</h3><p>വാർഷികാഘോഷം</p></div>
+<div class="card"><h3>Baby Shower</h3><p>ബേബി ഷവർ</p></div>
+<div class="card"><h3>Hamber Gift Frame</h3><p>ഫോട്ടോ ഗിഫ്റ്റ് ഫ്രെയിം</p></div>
+</div>
+</section>
+<section id="gift">
+<h2>Hamber Gift Frame</h2>
+<div class="grid">
+<div class="card"><h3>Custom Photo Frame</h3><p>നിങ്ങളുടെ സ്വന്തം ഫോട്ടോ ഉപയോഗിച്ച്</p></div>
+<div class="card"><h3>Ready-made Designs</h3><p>തയ്യാറായ ഡിസൈനുകളിൽ നിന്ന് തിരഞ്ഞെടുക്കാം</p></div>
+</div>
+<p style="text-align:center">Home Delivery & Shop Collection Available</p>
+</section>
+<section id="booking">
+<h2>Booking Enquiry | ബുക്കിംഗ്</h2>
+<form onsubmit="sendBooking(event)">
+<input id="name" placeholder="Your Name / പേര്" required>
+<input id="phone" type="tel" placeholder="Mobile Number / ഫോൺ നമ്പർ" required>
+<select id="service">
+<option>Wedding Events</option>
+<option>Birthday Parties</option>
+<option>Engagement</option>
+<option>Stage & Venue Decoration</option>
+<option>Anniversary</option>
+<option>Baby Shower</option>
+<option>Hamber Gift Frame - Custom</option>
+<option>Hamber Gift Frame - Ready-made</option>
+</select>
+<input id="date" type="date">
+<input id="place" placeholder="Event location / Delivery address">
+<select id="delivery">
+<option>Event Booking</option>
+<option>Home Delivery</option>
+<option>Shop Collection</option>
+</select>
+<textarea id="message" placeholder="Your requirements / കൂടുതൽ വിവരങ്ങൾ"></textarea>
+<button type="submit">Send Enquiry on WhatsApp</button>
+</form>
+</section>
+<footer>
+<h3>CREATIVE HAMBER</h3>
+<p>Thalassery, Kannur, Kerala</p>
+<p>Contact: +91 98953 90397</p>
+<p>© CREATIVE HAMBER</p>
+</footer>
+<script>
+function sendBooking(e){
+e.preventDefault();
+let msg="CREATIVE HAMBER ENQUIRY\nName: "+name.value+
+"\nPhone: "+phone.value+
+"\nService: "+service.value+
+"\nDate: "+date.value+
+"\nLocation: "+place.value+
+"\nOrder/Delivery: "+delivery.value+
+"\nDetails: "+message.value;
+window.open("https://wa.me/919895390397?text="+encodeURIComponent(msg),"_blank");
+}
+</script>
+</body>
+</html>
+
